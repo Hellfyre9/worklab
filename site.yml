@@ -2,6 +2,7 @@
 - hosts: bb5060
   become: true
   tasks:
-    - name: Print OS Info
-      ansible.builtin.package
-        name: screen
+    - name: update apt packages
+      apt:
+        upgrade: yes
+        update_cache: yes
